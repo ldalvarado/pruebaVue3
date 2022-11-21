@@ -1,0 +1,162 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+/* body */
+body{
+	height: 100vh;
+	background: linear-gradient(135deg, #111111, #2b2b2b, #434343, #656565);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+h1{
+	width: 88%;
+	color: white;
+}
+
+h3{
+	font-size: 22px;
+	border-bottom: 2px solid #65eaf6;
+	width: 40%;
+  	font-weight: bold;
+}
+
+.h3-icon{
+	font-size: 22px;
+	border-bottom: 2px solid transparent;
+	width: 40%;
+  	font-weight: bold;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+	width: 20px;
+}
+  
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+	background-color: #d6dee1;
+	border-radius: 20px;
+	border: 6px solid transparent;
+	background-clip: content-box;
+}
+  
+  ::-webkit-scrollbar-thumb:hover {
+	background-color: #65eaf6;
+}
+/* contenedor y lista */
+.contentlist{
+	width: 100%;
+	display: flex;
+	overflow: auto;
+	border-radius: 8px;
+	max-width: 1200px;
+  	padding-bottom: 50px;
+}
+
+.layerlist{
+	width: 348px;
+	height: 410px;
+	background: white;
+	padding: 24px;
+	border-radius: 8px;
+	margin-right: 30px;
+	transition: all 0.2s;
+	background: radial-gradient(#65eaf6, #19aaf8);
+}
+
+.layerlist:hover{
+	box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  	transform: scale(1.01);
+}
+/* detalles */
+.songdetails{
+  	height: 80px;
+	padding: 24px 0px 24px 0px;
+}
+
+.songdetails h4{
+	font-size: 24px;
+}
+
+.songdetails h5{
+	font-size: 18px;
+	color: #656565;
+}
+
+.layerlist > img{
+	width: 200px;
+	border-radius: 8px;
+}
+/* estrellas */
+.optionsStarts{
+	transition: 1s all;
+}
+
+.optionsStarts:hover{
+	color: rgb(227, 227, 96);
+}
+
+.optionsStarts:hover .icon-start{
+	transform: rotate(360deg);
+}
